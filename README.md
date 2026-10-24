@@ -4,13 +4,13 @@ Canvas'ın Windows beta kurulumları ve sürüm notları. Bu depo kurulum dosyal
 
 **Gereksinim:** Windows 11 24H2 veya sonrası, x64.
 
-## 0.1.3.0 kullanıcıları: sessiz otomatik güncelleme testi
+## 0.1.4.0 kullanıcıları: arka plan güncellemesi testi
 
-Güncel paket `0.1.4.0`, uygulama sürümü `0.1.4-beta.1`'dir. `.appinstaller` üzerinden kurduğunuz `0.1.3.0` sürümünden geçerken **bu testte yeni kurulum dosyası indirmeyin veya açmayın; uygulamayı kaldırmayın.**
+Güncel paket `0.1.5.0`, uygulama sürümü `0.1.5-beta.1`'dir. `.appinstaller` üzerinden kurduğunuz `0.1.4.0` sürümünden geçerken **bu testte yeni kurulum dosyası indirmeyin veya açmayın; uygulamayı kaldırmayın.**
 
-Çalışmalarınızı kaydedip Canvas Beta'yı kapatın ve Başlat menüsünden açın. Windows'un indirmeyi ve güncellemeyi uygun olduğunda tamamlamasına izin verin; ardından kaydedip kapatın ve Başlat menüsünden yeniden açın. **Ayarlar → Update** sayfasında `0.1.4-beta.1` göründüğünü ve mevcut projelerinizin korunduğunu kontrol edin. Elle kurulum yapmadan sürümün değişmesi otomatik geçişi doğrular; kesin bir tamamlanma süresi beklemeyin.
+Çalışmalarınızı kaydedip Canvas Beta'yı kapatın; bilgisayarı internet bağlantısıyla açık bırakın. Windows'un yaklaşık sekiz saatte bir çalışan arka plan görevinin indirmeyi ve güncellemeyi uygun olduğunda tamamlamasına izin verin. Daha sonra Başlat menüsünden açıp **Ayarlar → Update** sayfasında `0.1.5-beta.1` göründüğünü ve mevcut projelerinizin korunduğunu kontrol edin. Elle kurulum yapmadan sürümün değişmesi otomatik geçişi doğrular; kesin bir tamamlanma süresi beklemeyin.
 
-Eski kurulumdaki görünür denetim ayarı yeni ayarlar kaydedilene kadar yükleyici penceresini tekrar gösterebilir. Yeni ayarla yapılan yerel açılış testinde beyaz pencere görülmemiştir; yeni arka plan göreviyle otomatik güncellemenin tamamı henüz ayrıca test edilmemiştir.
+Eski açılış denetimi ayarları Windows yeni yapılandırmayı kaydedene kadar geçerli kalabilir; ilk açılışın hiç beklemeden gerçekleşeceği garanti edilmez. Bu sürüm için yerel kurulum ve uygulamayı çalıştırarak uçtan uca güncelleme testi yapılmamıştır.
 
 ## Kurulum / 0.1.1.0'dan güncelleme
 
@@ -18,7 +18,7 @@ Eski kurulumdaki görünür denetim ayarı yeni ayarlar kaydedilene kadar yükle
 
 Dosyayı indirip açın; Windows'un kurulum penceresinde **Yükle** veya **Güncelle** seçin. Mevcut `0.1.1.0` kurulumunu kaldırmayın. Sertifikası zaten güvenilir olan kullanıcıların yeniden sertifika yüklemesi gerekmez.
 
-İlk kez kuruyorsanız önce [Canvas-Beta.cer](https://github.com/kbingol/canvas-release/releases/download/v0.1.4-beta.1/Canvas-Beta.cer) sertifikasını indirin. Parmak izi:
+İlk kez kuruyorsanız önce [Canvas-Beta.cer](https://github.com/kbingol/canvas-release/releases/download/v0.1.5-beta.1/Canvas-Beta.cer) sertifikasını indirin. Parmak izi:
 
 ```text
 5BE262C15AEEEF8771888BFEE1AF99CD35F3344F
@@ -28,13 +28,13 @@ Sertifikayı açıp **Sertifika Yükle → Yerel Makine → Tüm sertifikaları 
 
 ## Sonraki güncellemeler
 
-`.appinstaller` ile ilk kurulum veya bir defalık geçiş, Windows'a sabit güncelleme adresini kaydeder. Bu sürümde açılışta her seferinde sessiz denetim (`HoursBetweenUpdateChecks="0"`, `ShowPrompt="false"`, `UpdateBlocksActivation="false"`) ve yaklaşık sekiz saatte bir penceresiz arka plan denetimi (`AutomaticBackgroundTask`) kullanılır.
+`.appinstaller` ile ilk kurulum veya bir defalık geçiş, Windows'a sabit güncelleme adresini kaydeder. Bu sürüm yalnız `AutomaticBackgroundTask` kullanır: Windows, uygulama açılmasa da yaklaşık sekiz saatte bir penceresiz arka plan denetimi yapar. `OnLaunch` kaldırılmıştır; yeni yapılandırma kaydedildikten sonra denetim uygulama açılışına bağlı değildir.
 
-Windows paketi indirip uygun zamanda uygular; yeni sürümün aynı açılışa yetişmesi garanti değildir. Her sürümde kurulum dosyası indirmeniz veya aynı sertifikayı yeniden yüklemeniz gerekmez. Canvas içinden yeni sürüm bildirimi eklenmemiştir.
+Windows paketi indirip uygun zamanda uygular; belirli bir sürede veya açılışta yeni sürüme geçiş garanti değildir. Her sürümde kurulum dosyası indirmeniz veya aynı sertifikayı yeniden yüklemeniz gerekmez. Canvas'a özel açılış güncelleme ekranı veya uygulama içi güncelleyici eklenmemiştir.
 
 Doğrudan `.msix` ile kurulum güncelleme adresini kaydetmez. Windows'un sonraki sürümleri takip etmesi için yukarıdaki `.appinstaller` bağlantısını kullanın.
 
-**[Tüm sürümler ve sürüm notları](https://github.com/kbingol/canvas-release/releases)** · **[Ayrıntılı kurulum kılavuzu](https://github.com/kbingol/canvas-release/releases/download/v0.1.4-beta.1/README.md)**
+**[Tüm sürümler ve sürüm notları](https://github.com/kbingol/canvas-release/releases)** · **[Ayrıntılı kurulum kılavuzu](https://github.com/kbingol/canvas-release/releases/download/v0.1.5-beta.1/README.md)**
 
 Eski `0.1.0.0` farklı paket kimliği kullanır ve yerinde güncellenmez. Projeleri `.flow` olarak dışa aktarıp yeni beta'da açın; kişisel asistanlarınızı yedekleyin. Kaldırma paket verilerini silebilir.
 
