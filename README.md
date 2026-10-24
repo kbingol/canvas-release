@@ -4,13 +4,24 @@ Canvas'ın Windows beta kurulumları ve sürüm notları. Bu depo kurulum dosyal
 
 **Gereksinim:** Windows 11 24H2 veya sonrası, x64.
 
-## 0.1.6.0 sürümüne geçiş
+## 0.1.6.0 → 0.1.7.0 güncelleme testi
 
-Güncel paket `0.1.6.0`, uygulama sürümü `0.1.6-beta.1`'dir. Bu sürüm, çalışma alanı açılmadan önce güncellemeyi denetleyen ve bulunan beta güncellemesini yükleyen açılış ekranını içerir.
+Güncel paket `0.1.7.0`, uygulama sürümü `0.1.7-beta.1`'dir. Bu yayın, mevcut açılış güncelleyicisini gerçek paketler arasında sınamak için yalnız sürüm numaralarını yükseltir.
 
-`0.1.5.0` henüz bu açılış davranışına sahip değildir. İlk geçiş için çalışmalarınızı kaydedip Canvas Beta'yı kapatın; Windows'un mevcut arka plan güncellemesini bekleyin veya aşağıdaki `.appinstaller` dosyasını açıp **Güncelle** seçin. Uygulamayı kaldırmayın. Başlat menüsünden açtıktan sonra **Ayarlar → Update** sayfasında `0.1.6-beta.1` göründüğünü ve projelerinizin korunduğunu kontrol edin.
+Testin başlangıcında `0.1.6.0` (`0.1.6-beta.1`) kurulu olmalıdır. **Bu test için yeni kurulum dosyası indirmeyin veya açmayın; uygulamayı kaldırmayın.**
 
-Yeni açılış akışının güncelleme testi, `0.1.6.0` kurulduktan sonra `0.1.7.0` gibi daha yüksek bir sürüm yayımlandığında yapılabilir: yeni kurulum dosyası indirmeden Canvas Beta'yı Başlat menüsünden açın ve güncellemeyi açılış ekranından takip edin. Gerçek kurulumdan yeni sürüme yeniden açılışa kadar uçtan uca test henüz tamamlanmamıştır.
+1. Canvas Beta'yı açmadan, Windows Ayarları'ndaki kurulu uygulama bilgilerinden başlangıç sürümünün `0.1.6.0` olduğunu doğrulayın.
+2. Çalışmalarınızı kaydedip tüm Canvas Beta pencerelerini normal şekilde kapatın.
+3. İnternet bağlantısı açıkken Canvas Beta'yı **Başlat menüsünden** açın. Beklenen akış: açılışta denetim, indirme, yükleme ve yeni sürümle yeniden açılış.
+4. **Ayarlar → Update** sayfasında `0.1.7-beta.1` göründüğünü ve projelerinizin korunduğunu kontrol edin.
+
+Windows'un arka plan görevi önceden güncellemişse uygulama zaten `0.1.7-beta.1` olarak açılabilir; bu durumda açılışta indirme ve yeniden başlatma akışı sınanmış olmaz. Gerçek kurulumdan yeni sürüme yeniden açılışa kadar uçtan uca test henüz tamamlanmamıştır.
+
+Hata çıkarsa açılış ekranındaki tam hata metnini kaydedin. Uygulamayı kaldırmayın, diğer Canvas işlemlerini zorla sonlandırmayın veya sertifika güven ayarlarını değiştirmeyin.
+
+## 0.1.5.0'dan ilk geçiş
+
+`0.1.5.0` henüz açılış güncelleyicisine sahip değildir. Çalışmalarınızı kaydedip Canvas Beta'yı kapatın; Windows'un mevcut arka plan güncellemesini bekleyin veya aşağıdaki `.appinstaller` dosyasını açıp **Güncelle** seçin. Uygulamayı kaldırmayın. Bu geçiş, yukarıdaki açılış güncellemesi testi sayılmaz.
 
 ## Kurulum / 0.1.1.0'dan güncelleme
 
@@ -18,7 +29,7 @@ Yeni açılış akışının güncelleme testi, `0.1.6.0` kurulduktan sonra `0.1
 
 Dosyayı indirip açın; Windows'un kurulum penceresinde **Yükle** veya **Güncelle** seçin. Mevcut `0.1.1.0` kurulumunu kaldırmayın. Sertifikası zaten güvenilir olan kullanıcıların yeniden sertifika yüklemesi gerekmez.
 
-İlk kez kuruyorsanız önce [Canvas-Beta.cer](https://github.com/kbingol/canvas-release/releases/download/v0.1.6-beta.1/Canvas-Beta.cer) sertifikasını indirin. Parmak izi:
+İlk kez kuruyorsanız önce [Canvas-Beta.cer](https://github.com/kbingol/canvas-release/releases/download/v0.1.7-beta.1/Canvas-Beta.cer) sertifikasını indirin. Parmak izi:
 
 ```text
 5BE262C15AEEEF8771888BFEE1AF99CD35F3344F
@@ -34,7 +45,7 @@ Sertifikayı açıp **Sertifika Yükle → Yerel Makine → Tüm sertifikaları 
 
 Windows'un sessiz arka plan güncellemesi de korunur. Güncellemenin belirli bir sürede tamamlanacağı garanti edilmez. Her sürümde kurulum dosyası indirmeniz veya aynı sertifikayı yeniden yüklemeniz gerekmez. Güncelleme adresini kaydetmek için ilk kurulumda veya bir defalık geçişte yukarıdaki `.appinstaller` bağlantısını kullanın; doğrudan `.msix` ile kurulum bu adresi kaydetmez.
 
-**[Tüm sürümler ve sürüm notları](https://github.com/kbingol/canvas-release/releases)** · **[Ayrıntılı kurulum kılavuzu](https://github.com/kbingol/canvas-release/releases/download/v0.1.6-beta.1/README.md)**
+**[Tüm sürümler ve sürüm notları](https://github.com/kbingol/canvas-release/releases)** · **[Ayrıntılı kurulum kılavuzu](https://github.com/kbingol/canvas-release/releases/download/v0.1.7-beta.1/README.md)**
 
 Eski `0.1.0.0` farklı paket kimliği kullanır ve yerinde güncellenmez. Projeleri `.flow` olarak dışa aktarıp yeni beta'da açın; kişisel asistanlarınızı yedekleyin. Kaldırma paket verilerini silebilir.
 
